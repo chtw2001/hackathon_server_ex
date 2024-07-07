@@ -15,12 +15,12 @@ public class HelloController {
 
     private final HelloService helloService;
 
-    @PostMapping("/api/add")
+    @PostMapping("/add")
     public Hello addHello(@RequestBody Map<String, String> requestBody) {
         return helloService.addHello(requestBody.get("name"));
     }
 
-    @GetMapping("/api/get/{id}")
+    @GetMapping("/get/{id}")
     public Hello getHello(@PathVariable Long id) {
         return helloService.getHello(id);
     }
